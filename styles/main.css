@@ -8,7 +8,7 @@
     scroll-behavior: smooth;
     font-size: 18px;
     color: var(--light-text-color);
-    
+
 }
 
 :root {
@@ -63,7 +63,7 @@ body {
     display: flex;
     flex-direction: row;
     background-color: var(--test);
-    
+
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -204,9 +204,8 @@ section {
 
 .dev-project-section-aligned-left {
     position: relative;
-
     width: 100%;
-    height: 24rem;
+    height: fit-content;
     overflow: hidden;
     z-index: 0;
 
@@ -220,7 +219,7 @@ section {
     }
 
     & .dev-project-section-left {
-        position: absolute;
+        position: relative;
         left: 0;
         display: flex;
         flex-direction: column;
@@ -229,10 +228,12 @@ section {
         width: 60%;
         height: 100%;
         z-index: 0;
-        padding: 4rem 0rem 4rem 6rem;
+        padding: 3rem 0rem 3rem 4rem;
 
         & p {
             margin-bottom: 2rem;
+            overflow-y: scroll;
+            overflow-x: hidden;
         }
 
         & svg {
@@ -313,13 +314,15 @@ section {
         justify-content: space-around;
         align-items: end;
         text-align: right;
-        width: 50%;
+        width: 60%;
         height: 100%;
         z-index: 0;
-        padding: 4rem 6rem 4rem 0rem;
+        padding: 3rem 4rem 3rem 0rem;
 
         & p {
             margin-bottom: 2rem;
+            overflow-y: scroll;
+            overflow-x: hidden;
         }
 
         & svg {
@@ -659,8 +662,11 @@ h4 {
 h5 {
     font-size: 1.6rem;
 }
+
 /* Mobile fixes */
 @media only screen and (max-width: 720px) {
+
+
     body {
         flex-direction: column;
         overflow-x: hidden;
@@ -670,46 +676,80 @@ h5 {
 
     section {
         min-height: 100vh;
+        max-height: 100vh;
+        overflow-x: hidden;
+        overflow-y: hidden;
     }
 
     .home {
-        padding: 6em 2em;
+        padding: 6em 1em;
     }
 
-    .dev-header,
-    .art-header {
-        height: auto;
-        padding: 2rem;
-        gap: 2rem;
-    }
+    .dev-header {
+        height: 24rem;
 
-    .dev-project-section-aligned-left,
-    .dev-project-section-aligned-right {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-
-        & .dev-project-section-left,
-        & .dev-project-section-right {
+        & h1 {
             position: relative;
-            width: 100%;
-            padding: 2rem;
+            top: 5rem;
+            color: white;
+        }
+
+        & p {
+            position: relative;
+            top: 5rem;
+            color: white;
         }
     }
 
-    .grid-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        padding: 2rem;
-        height: auto;
+    .dev-skills {
+        padding: 1rem;
     }
 
-    .art-commission,
-    .art-support {
-        padding: 2rem;
+    .dev-project-section-aligned-left {
+        height: 36rem;
+
+        & .dev-project-section-left {
+            width: 80%;
+            justify-content: start;
+            gap: 2rem;
+            padding: 4rem 2rem;
+        }
     }
 
-    .art-title h1 {
-        font-size: 4rem;
+    .dev-project-section-aligned-right {
+        height: 36rem;
+
+        & .dev-project-section-right {
+            width: 80%;
+            justify-content: start;
+            gap: 2rem;
+            padding: 4rem 2rem;
+        }
+    }
+
+    .art-header {
+        height: 24rem;
+    }
+
+    .art-skills {
+        padding: 1rem;
+    }
+
+    a {
+        font-size: 1.2rem;
+        &.button-logo {
+            font-size: 1.4rem;
+        }
+    }
+
+    .art-commission{
+        flex-direction: column;
+        width: 100%;
+        padding: 4rem 2rem;
+    }
+    .art-support{
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 4rem 2rem;
     }
 }
