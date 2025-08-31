@@ -683,6 +683,7 @@ h5 {
 
     .home {
         padding: 6em 1em;
+        /* overflow: hidden; */
     }
 
     .dev-header {
