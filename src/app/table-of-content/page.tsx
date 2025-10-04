@@ -6,11 +6,19 @@ function TableOfContentPage() {
     return (
         <section className={`${playfair_display.className}`}>
             <Image src="/imgs/tableOfContent.jpg" alt="" className="image-background" width={1920} height={1080}/>
-            <Link className={`${inter.className}`} href="/">Go Back</Link>
+            <Link href="/" className={`${inter.className} a-link-underline-animated`}>Go Back</Link>
             <div>
                 <ol>
                     <li>
-                        <Link href="/">Home</Link>
+                        <Link href="/" className="link-underline-animated text-xl">Home</Link>
+                    </li>
+                    <hr />
+                    <li>
+                        <Link href="/" className="link-underline-animated text-xl">Dev</Link>
+                    </li>
+                    <hr />
+                    <li>
+                        <Link href="/" className="link-underline-animated text-xl">Art</Link>
                     </li>
                 </ol>
             </div>
