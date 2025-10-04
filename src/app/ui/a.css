@@ -1,3 +1,12 @@
+@layer base{
+  /* Default styles */
+  a {
+    color: inherit;
+    width: fit-content;
+    text-decoration: none;
+  }
+}
+
 @layer components{
     .link-underline-animated{
         position: relative;

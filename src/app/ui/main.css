@@ -1,0 +1,28 @@
+@layer base{
+  main {
+    flex: 1;
+    position: relative;
+    margin: 2rem;
+    padding: 1rem;
+    border: 1px solid white;
+    box-shadow: 12px 12px 0px black;
+    overflow: hidden;
+    user-select: none;
+  }
+}
+
+@layer components{
+  .main-book-cover {
+  }
+  .main-table-of-contents {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    transition: all var(--animation-time-medium);
+  }
+  @media screen and (max-width: 768px){
+    .main-table-of-contents {
+      grid-template-columns: 0fr 1fr;
+    }
+  }
+
+}

@@ -1,0 +1,32 @@
+@layer base {
+    /* section {
+
+    } */
+}
+
+@layer components {
+    .section-book-cover {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        gap: 1rem;
+        padding: 12rem 2rem 2rem 2rem;
+
+    }
+
+    .section-table-of-contains-intro {}
+
+    .section-table-of-contents {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        overflow: scroll;
+    }
+
+    @media screen and (max-height: 768px) {
+        .section-book-cover {
+            padding: 4rem 2rem 2rem 2rem;
+        }
+    }
+}
