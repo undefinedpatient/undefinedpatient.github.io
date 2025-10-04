@@ -1,0 +1,21 @@
+.a-link-underline-animated{
+    position: relative;
+    left: 0;
+    transition: all var(--animation-time-medium) ease;
+    &:hover{
+        left: 1rem;
+        &::after{
+            width: 100%;
+        }
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: white;
+        transition: all var(--animation-time-medium) ease;
+    }
+}
