@@ -12,19 +12,44 @@
         justify-content: end;
         gap: 1rem;
         padding: 12rem 2rem 2rem 2rem;
-
+        transition: padding var(--animation-time-medium) ease;
     }
 
-    .section-table-of-contains-intro {}
+    .section-table-of-contains-intro {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        padding: 3rem 2rem;
+        margin: 4rem;
+        background-color: rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        backdrop-filter: blur(4px);
+        box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.8);
+        & p:first-child{
+            text-orientation: sideways;
+            writing-mode: sideways-lr;
+        }
+    }
 
     .section-table-of-contents {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         overflow: scroll;
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
     }
 
-    @media screen and (max-height: 768px) {
+    @media screen and (max-width: 768px) {
+        .section-table-of-contains-intro {
+            display: none;
+        }
+    }
+
+    @media screen and (max-height: 640px) {
+        .section-table-of-contains-intro {
+            display: none;
+        }
         .section-book-cover {
             padding: 4rem 2rem 2rem 2rem;
         }

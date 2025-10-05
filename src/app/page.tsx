@@ -12,7 +12,7 @@ export default function BookCover() {
           <hr className="w-[min(100%,24rem)]" />
           <span className={`${doto.className} text-3xl`}>Programmer | Artist</span>
           <p className={`${doto.className} text-base md:text-xl max-w-[64ch]`}>
-            The Journey of a autistic mind who determined to make the purest story in the world.
+            The Journey of a autistic mind attempting to live a meaningful life. 
           </p>
         </header>
         <Link className={`${playfair_display.className} link-underline-animated text-3xl flex-1`} href='/table-of-content'>Start Reading &rarr;</Link>

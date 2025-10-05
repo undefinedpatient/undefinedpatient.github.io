@@ -1,7 +1,10 @@
+"use client"
+
 function LoadingPage() {
-    return (<>
-        <p>Loading</p>
-    </>)
+    return (
+        <main className="flex">
+            <p>Loading</p>
+        </main>)
 }
 
 export default LoadingPage;
