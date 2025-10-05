@@ -8,7 +8,7 @@ function TableOfContentsPage() {
             <Image src="/imgs/tableOfContent.jpg" alt="" className="image-background" width={1920} height={1080} />
             <section className="section-table-of-contains-intro">
                 <p className="text-3xl">Disordered Patient</p>
-                <p>
+                <p className="max-w-[48ch]">
                     <span className="text-2xl">About the Author</span>
                     <hr />
                     &emsp;Patient (Ethan, Choi), born in 2005, discovered early on the joy of creation and the transformative power of computers. Inspired by the possibilities they unlock, he began his journey into the worlds of art and computer science at the age of 18.
@@ -24,10 +24,6 @@ function TableOfContentsPage() {
                     <br />
                     <hr />
                 </p>
-
-                <ul>
-
-                </ul>
             </section>
             <section className="section-table-of-contents">
                 <h2 className="text-nowrap whitespace-nowrap">Table of Contents<hr className="w-[min(100%,24rem)]" /></h2>
@@ -41,7 +37,7 @@ function TableOfContentsPage() {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/" className="link-underline-animated text-xl">
+                                    <Link href="/philosophy" className="link-underline-animated text-xl">
                                         <span>Philosophy</span>
                                     </Link>
                                 </li>
@@ -98,6 +94,16 @@ function TableOfContentsPage() {
                                 <li>
                                     <Link href="/art" className="link-underline-animated text-xl">
                                         <span>Goals</span>
+                                    </Link>
+                                </li>
+                            </ul>
+                        </li>
+                        <hr className="w-[min(100%,24rem)]" />
+                        <li>
+                            <ul>
+                                <li>
+                                    <Link href="/laboratory" className="link-underline-animated text-xl">
+                                        <span>Laboratory</span>
                                     </Link>
                                 </li>
                             </ul>

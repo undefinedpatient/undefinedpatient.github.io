@@ -3,7 +3,7 @@
     flex: 1;
     position: relative;
     margin: 2rem;
-    padding: 1rem;
+    padding: 2rem;
     border: 1px solid white;
     box-shadow: 12px 12px 0px black;
     overflow: hidden;
@@ -16,8 +16,15 @@
   }
   .main-table-of-contents {
     display: grid;
+    align-content: center;
     grid-template-columns: 1fr 1fr;
     transition: all var(--animation-time-medium);
+  }
+  .main-dev{
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 4rem;
+    gap: 1rem;
   }
   @media screen and (max-width: 768px){
     .main-table-of-contents {
