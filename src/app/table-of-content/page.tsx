@@ -10,7 +10,7 @@ function TableOfContentsPage() {
                 <p className="text-3xl">Disordered Patient</p>
                 <p className="max-w-[48ch]">
                     <span className="text-2xl">About the Author</span>
-                    <hr />
+                    <hr className="hr-animated-lr" />
                     &emsp;Patient (Ethan, Choi), born in 2005, discovered early on the joy of creation and the transformative power of computers. Inspired by the possibilities they unlock, he began his journey into the worlds of art and computer science at the age of 18.
                     <br />
                     &emsp;With a keen eye for aesthetics, Ethan is passionate about frontend development, placing strong emphasis on visual detail and user experience. He is currently exploring the Next.js framework, which he believes will be instrumental in shaping his future career.
@@ -22,7 +22,7 @@ function TableOfContentsPage() {
                     &nbsp;where he maintains a CGA above 3.6 out of 4.3.
                     <br />
                     <br />
-                    <hr />
+                    <hr className="hr-animated-lr" />
                 </p>
             </section>
             <section className="section-table-of-contents">

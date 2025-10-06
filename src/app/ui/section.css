@@ -24,6 +24,7 @@
         margin: 4rem;
         background-color: rgba(0, 0, 0, 0.5);
         overflow: hidden;
+        overflow-y: scroll;
         backdrop-filter: blur(4px);
         box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.8);
         & p:first-child{
@@ -39,10 +40,17 @@
         overflow: scroll;
         text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
     }
-
+    .section-philosophy {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        height: 100%;
+        padding: 2rem;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
     .section-dev-chapter-summary{
         flex: 1;
-
     }
     .section-dev-chapter-overviews{
         flex: 3;
@@ -65,7 +73,7 @@
             display: none;
         }
         .section-book-cover {
-            padding: 4rem 2rem 2rem 2rem;
+            padding: 8rem 2rem 2rem 2rem;
         }
     }
 }

@@ -1,0 +1,26 @@
+.hr-animated-lr {
+    transform-origin: left;
+    animation: hr-animation-lr ease var(--animation-time-prolonged);
+}
+.hr-animated-rl {
+    transform-origin: right;
+    animation: hr-animation-rl ease var(--animation-time-prolonged);
+}
+
+@keyframes hr-animation-lr {
+    from {
+        scale: 0;
+    }
+    to {
+        scale: 100%;
+    }
+}
+@keyframes hr-animation-rl {
+    from {
+        scale: 0;
+    }
+    to {
+        scale: 100%;
+    }
+    
+}

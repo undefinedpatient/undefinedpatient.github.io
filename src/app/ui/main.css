@@ -1,4 +1,4 @@
-@layer base{
+@layer base {
   main {
     flex: 1;
     position: relative;
@@ -11,24 +11,37 @@
   }
 }
 
-@layer components{
-  .main-book-cover {
-  }
+@layer components {
+  .main-book-cover {}
+
   .main-table-of-contents {
     display: grid;
     align-content: center;
     grid-template-columns: 1fr 1fr;
     transition: all var(--animation-time-medium);
   }
-  .main-dev{
-    display:grid;
-    grid-template-columns: 1fr 3fr;
+
+  .main-philosophy {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 0;
+    transition: all var(--animation-time-medium) ease;
+  }
+
+  .main-grid-primary {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 4rem;
     gap: 1rem;
   }
-  @media screen and (max-width: 768px){
+
+  @media screen and (max-width: 768px) {
     .main-table-of-contents {
       grid-template-columns: 1fr;
+    }
+
+    .main-philosophy {
+      grid-template-columns: 1fr 0fr;
     }
   }
 

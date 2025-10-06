@@ -9,7 +9,7 @@ export default function BookCover() {
         <span className="p-4 text-3xl absolute top-4 lg:right-4">Twenty Anniversary Edition</span>
         <header className="flex-4">
           <h1>Patient</h1>
-          <hr className="w-[min(100%,24rem)]" />
+          <hr className="hr-animated-lr w-[min(100%,24rem)]"/>
           <span className={`${doto.className} text-3xl`}>Programmer | Artist</span>
           <p className={`${doto.className} text-base md:text-xl max-w-[64ch]`}>
             The Journey of a autistic mind attempting to live a meaningful life. 
