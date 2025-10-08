@@ -16,7 +16,6 @@ function DevPage(){
             <section className="section-dev-chapter-overviews">
                 <ChapterOverviewCard title="Experiences" description=""/>
                 <ChapterOverviewCard title="Tech Stacks" description=""/>
-                <ChapterOverviewCard title="Goals" description=""/>
             </section>
             <section>
                 <hr className="hr-animated-lr"/>

@@ -43,6 +43,7 @@ function TableOfContentsPage() {
                                 </li>
                             </ul>
                         </li>
+                        <br/>
                         <hr className="w-[min(100%,24rem)]" />
                         <li>
                             <ul>
@@ -61,13 +62,9 @@ function TableOfContentsPage() {
                                         <span>Tech stacks</span>
                                     </Link>
                                 </li>
-                                <li>
-                                    <Link href="/dev" className="link-underline-animated text-xl">
-                                        <span>Goals</span>
-                                    </Link>
-                                </li>
                             </ul>
                         </li>
+                        <br/>
                         <hr className="w-[min(100%,24rem)]" />
                         <li>
                             <ul>
@@ -91,13 +88,9 @@ function TableOfContentsPage() {
                                         <span>Collaborative Arts</span>
                                     </Link>
                                 </li>
-                                <li>
-                                    <Link href="/art" className="link-underline-animated text-xl">
-                                        <span>Goals</span>
-                                    </Link>
-                                </li>
                             </ul>
                         </li>
+                        <br/>
                         <hr className="w-[min(100%,24rem)]" />
                         <li>
                             <ul>
