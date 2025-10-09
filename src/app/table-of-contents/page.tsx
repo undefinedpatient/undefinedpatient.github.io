@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { playfair_display } from "../ui/fonts";
+import PageFooter from "../components/PageFooter";
+import ChapterLink from "../components/ChapterLink";
 
 function TableOfContentsPage() {
     return (
@@ -32,14 +34,10 @@ function TableOfContentsPage() {
                         <li>
                             <ul>
                                 <li>
-                                    <Link href="/" className="link-underline-animated text-3xl">
-                                        <span>Home</span>
-                                    </Link>
+                                    <ChapterLink text="Home" url="/" description="" pageNumber={0} className="link-underline-animated text-3xl"/>
                                 </li>
                                 <li>
-                                    <Link href="/philosophy" className="link-underline-animated text-xl">
-                                        <span>Philosophy</span>
-                                    </Link>
+                                    <ChapterLink text="Philosophy" url="/philosophy" description="" pageNumber={2} className="link-underline-animated text-xl"/>
                                 </li>
                             </ul>
                         </li>
@@ -48,19 +46,13 @@ function TableOfContentsPage() {
                         <li>
                             <ul>
                                 <li>
-                                    <Link href="/dev" className="link-underline-animated text-3xl">
-                                        <span>Dev</span>
-                                    </Link>
+                                    <ChapterLink text="Dev" url="/dev" description="" pageNumber={3} className="link-underline-animated text-3xl"/>
                                 </li>
                                 <li>
-                                    <Link href="/dev" className="link-underline-animated text-xl">
-                                        <span>Experiences</span>
-                                    </Link>
+                                    <ChapterLink text="Experiences" url="/dev/experiences" description="" pageNumber={4} className="link-underline-animated text-xl"/>
                                 </li>
                                 <li>
-                                    <Link href="/dev" className="link-underline-animated text-xl">
-                                        <span>Tech stacks</span>
-                                    </Link>
+                                    <ChapterLink text="Tech Stacks" url="/dev/tech-stacks" description="" pageNumber={5} className="link-underline-animated text-xl"/>
                                 </li>
                             </ul>
                         </li>
@@ -69,24 +61,16 @@ function TableOfContentsPage() {
                         <li>
                             <ul>
                                 <li>
-                                    <Link href="/art" className="link-underline-animated text-3xl">
-                                        <span>Art</span>
-                                    </Link>
+                                    <ChapterLink text="Art" url="/art" description="" pageNumber={6} className="link-underline-animated text-3xl"/>
                                 </li>
                                 <li>
-                                    <Link href="/art" className="link-underline-animated text-xl">
-                                        <span>Gallery</span>
-                                    </Link>
+                                    <ChapterLink text="Gallery" url="/art/gallery" description="" pageNumber={7} className="link-underline-animated text-xl"/>
                                 </li>
                                 <li>
-                                    <Link href="/art" className="link-underline-animated text-xl">
-                                        <span>Individual Arts</span>
-                                    </Link>
+                                    <ChapterLink text="Individual Arts" url="/art/individual-arts" description="" pageNumber={8} className="link-underline-animated text-xl"/>
                                 </li>
                                 <li>
-                                    <Link href="/art" className="link-underline-animated text-xl">
-                                        <span>Collaborative Arts</span>
-                                    </Link>
+                                    <ChapterLink text="Collaborative Arts" url="/art/collaborative-arts" description="" pageNumber={9} className="link-underline-animated text-xl"/>
                                 </li>
                             </ul>
                         </li>
@@ -105,6 +89,7 @@ function TableOfContentsPage() {
                 </div>
 
             </section>
+            <PageFooter previousUrl="/" currentPage={1} nextUrl="/philosophy"/>
         </main>
     );
 }

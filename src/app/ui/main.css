@@ -3,7 +3,7 @@
     flex: 1;
     position: relative;
     margin: 2rem;
-    padding: 2rem;
+    padding: 2rem 4rem;
     border: 1px solid white;
     box-shadow: 12px 12px 0px black;
     overflow: hidden;
@@ -18,21 +18,22 @@
     display: grid;
     align-content: center;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2rem;
     transition: all var(--animation-time-medium);
   }
 
   .main-philosophy {
     display: grid;
+    align-content: center;
     grid-template-columns: 1fr 2fr;
-    padding: 0;
+    grid-template-rows: 1fr 2rem;
     transition: all var(--animation-time-medium) ease;
   }
 
-  .main-grid-primary {
+  .main-pages {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 4rem;
-    gap: 1rem;
+    padding: 2rem 4rem;
+    grid-template-rows: 4rem 1fr 2rem;
   }
 
   @media screen and (max-width: 768px) {
@@ -43,6 +44,7 @@
     .main-philosophy {
       grid-template-columns: 1fr 0fr;
     }
+
   }
 
 }

@@ -27,19 +27,23 @@
         overflow-y: scroll;
         backdrop-filter: blur(4px);
         box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.8);
-        & p:first-child{
+
+        & p:first-child {
             text-orientation: sideways;
             writing-mode: sideways-lr;
         }
     }
 
     .section-table-of-contents {
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        width: fit-content;
         overflow: scroll;
         text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
     }
+
     .section-philosophy {
         position: relative;
         display: flex;
@@ -49,22 +53,27 @@
         padding: 2rem;
         background-color: rgba(0, 0, 0, 0.3);
     }
-    .section-dev-chapter-summary{
-        flex: 1;
-    }
-    .section-dev-chapter-overviews{
-        flex: 3;
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        & div{
-            flex: 1;
-        }
+
+    .section-pages {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 4rem;
+        transition: all var(--animation-time-medium) ease;
     }
 
     @media screen and (max-width: 768px) {
         .section-table-of-contains-intro {
             display: none;
+        }
+
+        .section-pages {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 120rem 1fr;
+            overflow-y: scroll;
+            padding: 0;
+            transition: all var(--animation-time-medium) ease;
         }
     }
 
@@ -72,8 +81,10 @@
         .section-table-of-contains-intro {
             display: none;
         }
+
         .section-book-cover {
             padding: 8rem 2rem 2rem 2rem;
         }
+
     }
 }

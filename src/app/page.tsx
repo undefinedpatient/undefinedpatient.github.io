@@ -15,7 +15,7 @@ export default function BookCover() {
             The Journey of a autistic mind attempting to live a meaningful life. 
           </p>
         </header>
-        <Link className={`${playfair_display.className} link-underline-animated text-3xl flex-1`} href='/table-of-content'>Start Reading &rarr;</Link>
+        <Link className={`${playfair_display.className} link-underline-animated text-3xl flex-1`} href='/table-of-contents'>Start Reading &rarr;</Link>
 
       </section>
     </main>

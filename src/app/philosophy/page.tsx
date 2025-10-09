@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import PageFooter from "@/app/components/PageFooter";
+import { playfair_display } from "../ui/fonts";
 
 function PhilosophyPage(){
     return (
-        <main className="main-philosophy">
+        <main className={`${playfair_display.className} main-philosophy`}>
             <Image src="/imgs/philosophy.jpg" alt="" className="image-background" width={1920} height={1080}></Image>
             <section className="section-philosophy">
-                <h1>Philosophy</h1>
+                <h2>Philosophy</h2>
                 <hr className="hr-animated-rl"/>
                 <div className="overflow-y-scroll">
                     <p className="p-4">
@@ -25,10 +27,11 @@ function PhilosophyPage(){
                     </p>
                 </div>
                 <hr className="hr-animated-lr"/>
-                <Link href="/table-of-content" className="link-underline-animated text-xl">Back to Table of Contents</Link>
+                <Link href="/table-of-contents" className="link-underline-animated text-xl">Back to Table of Contents</Link>
             </section>
             <section>
             </section>
+            <PageFooter previousUrl="/table-of-contents" currentPage={2} nextUrl="/dev"/>
 
         </main>
     )

@@ -8,7 +8,28 @@
 }
 
 @layer components{
-    .link-underline-animated{
+    .link-underline-animated-to-left{
+        position: relative;
+        right: 0;
+        transition: all var(--animation-time-medium) ease;
+        &:hover{
+            right: 0.4rem;
+            &::after{
+                width: 100%;
+            }
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 1px;
+            background-color: white;
+            transition: all var(--animation-time-medium) ease;
+        }
+    }
+    .link-underline-animated-to-right, .link-underline-animated{
         position: relative;
         left: 0;
         transition: all var(--animation-time-medium) ease;

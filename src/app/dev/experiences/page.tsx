@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { fira_code } from "../ui/fonts";
-import PageFooter from "../components/PageFooter";
+import { fira_code } from "@/app/ui/fonts";
+import PageFooter from "@/app/components/PageFooter";
 
-function DevPage() {
+function DevExperiencesPage() {
     //Shows array of page options
     return (
         <main className={`${fira_code.className} main-pages`}>
@@ -12,18 +12,16 @@ function DevPage() {
             </section>
             <section className="section-pages">
                 <div>
-                    <Image src="/imgs/mountain0.jpg" alt="mountain0" width={612} height={408} className="image-header"/>
-                    <h5>Overview</h5>
+                    <h5>Experiences</h5>
 
 
                 </div>
                 <div>
-                    page2<br></br>fasd
                 </div>
             </section>
-            <PageFooter previousUrl="/philosophy" currentPage={3} nextUrl="/dev/experiences"/>
+            <PageFooter previousUrl="/dev" currentPage={4} nextUrl="/dev/tech-stacks" />
         </main>
     )
 }
 
-export default DevPage;
+export default DevExperiencesPage;

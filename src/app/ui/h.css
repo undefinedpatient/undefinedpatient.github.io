@@ -18,6 +18,9 @@
   h5 {
     font-size: 1.6rem;
   }
+  h6 {
+    font-size: 1.2rem;
+  }
     
   @media screen and (max-width: 768px) {
     h1 {

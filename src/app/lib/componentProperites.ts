@@ -1,6 +1,13 @@
-interface ChapterOverviewProperties{
-    title: NonNullable<string>;
+interface ChapterLinkProperties{
+    text: NonNullable<string>;
     description: NonNullable<string>;
+    pageNumber: NonNullable<number>;
+    url: NonNullable<string>;
+    className?: string;
 }
-
-export type {ChapterOverviewProperties}
+interface PageFooterProperties {
+    nextUrl: NonNullable<string>;
+    previousUrl: NonNullable<string>;
+    currentPage: NonNullable<number>;
+}
+export type {ChapterLinkProperties, PageFooterProperties}

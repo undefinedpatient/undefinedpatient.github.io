@@ -1,0 +1,7 @@
+.chapter-link {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+}
