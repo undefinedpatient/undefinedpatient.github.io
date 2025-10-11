@@ -8,16 +8,10 @@ function DevExperiencesPage() {
         <main className={`${fira_code.className} main-pages`}>
             <Image src="/imgs/paper-texture.jpg" alt="" className="image-background" width={1920} height={1080}></Image>
             <section>
-                <h3>Dev</h3>
+                <h3 className="shadowed">Dev</h3>
             </section>
-            <section className="section-pages">
-                <div>
-                    <h5>Experiences</h5>
-
-
-                </div>
-                <div>
-                </div>
+            <section className="section-under-construction">
+                <h5 className="shadowed">Under Construction ,_,</h5>
             </section>
             <PageFooter previousUrl="/dev" currentPage={4} nextUrl="/dev/tech-stacks" />
         </main>

@@ -21,7 +21,7 @@ function TableOfContentsPage() {
                     <a href="https://hkust.edu.hk/" className="underline">
                         Hong Kong University of Science and Technology
                     </a>
-                    &nbsp;where he maintains a CGA above 3.6 out of 4.3.
+                    &nbsp;where he maintains a CGA above 3.6 out of 4.3, which is below-average amongst COMP students.
                     <br />
                     <br />
                     <hr className="hr-animated-lr" />

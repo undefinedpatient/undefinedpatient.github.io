@@ -2,7 +2,7 @@ import Image from "next/image";
 import { playfair_display } from "@/app/ui/fonts";
 import PageFooter from "@/app/components/PageFooter";
 
-function ArtPage() {
+function IndividualArtPage() {
     //Shows array of page options
     return (
         <main className={`${playfair_display.className} main-pages`}>
@@ -12,14 +12,14 @@ function ArtPage() {
             </section>
             <section className="section-pages">
                 <div>
-                    <h5>Overview</h5>
+                    <h5>Individual Arts</h5>
                 </div>
                 <div>
                 </div>
             </section>
-            <PageFooter previousUrl="/dev/tech-stacks" currentPage={6} nextUrl="/art/gallery" />
+            <PageFooter previousUrl="/art/gallery" currentPage={8} nextUrl="/art/collaborative-arts" />
         </main>
     )
 }
 
-export default ArtPage;
+export default IndividualArtPage;

@@ -21,6 +21,9 @@
   h6 {
     font-size: 1.2rem;
   }
+  h1.shadowed, h2.shadowed, h3.shadowed, h4.shadowed, h5.shadowed, h6.shadowed{
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8);
+  }
     
   @media screen and (max-width: 768px) {
     h1 {

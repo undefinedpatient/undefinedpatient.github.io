@@ -36,7 +36,7 @@
     grid-template-rows: 4rem 1fr 2rem;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024) {
     .main-table-of-contents {
       grid-template-columns: 1fr;
     }

@@ -1,0 +1,8 @@
+.card-table {
+    position: relative;
+    display: grid;
+    background-color: rgba(0,0, 0, 0.42);
+    padding: 1rem;
+    margin: 1rem 0.4rem;
+    box-shadow: 4px 4px 0px rgba(0,0, 0, 0.8);
+}

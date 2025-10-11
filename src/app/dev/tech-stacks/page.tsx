@@ -1,8 +1,10 @@
 import Image from "next/image";
-import { fira_code } from "../ui/fonts";
-import PageFooter from "../components/PageFooter";
+import { fira_code } from "@/app/ui/fonts";
+import PageFooter from "@/app/components/PageFooter";
+import CardTable from "@/app/components/CardTable";
+import ProgressionCard from "@/app/components/ProgressionCard";
 
-function DevPage() {
+function TechStacksPage() {
     //Shows array of page options
     return (
         <main className={`${fira_code.className} main-pages`}>
@@ -12,19 +14,19 @@ function DevPage() {
             </section>
             <section className="section-pages">
                 <div>
-                    <Image src="/imgs/mountain0.jpg" alt="mountain0" width={612} height={408} className="image-header shadowed"/>
+                    <h5>Tech Stacks</h5>
                     <hr className="hr-animated-lr"/>
-                    <h5>Overview</h5>
-                    <p></p>
+                    <CardTable>
+                        <ProgressionCard title="Nextjs" description="No Yet" progression={0.5}/>
+                    </CardTable>
 
                 </div>
                 <div>
-                    page2<br></br>fasd
                 </div>
             </section>
-            <PageFooter previousUrl="/philosophy" currentPage={3} nextUrl="/dev/experiences"/>
+            <PageFooter previousUrl="/dev/experiences" currentPage={5} nextUrl="/art" />
         </main>
     )
 }
 
-export default DevPage;
+export default TechStacksPage;
