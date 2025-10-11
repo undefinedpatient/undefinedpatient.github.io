@@ -56,12 +56,34 @@
         box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.8);
     }
 
+    .section-page-single {
+        display: flex;
+        flex-direction: column;
+        transition: all var(--animation-time-medium) ease;
+        padding: 1rem;
+    }
+
     .section-pages {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
         gap: 4rem;
         transition: all var(--animation-time-medium) ease;
+        padding: 1rem;
+
+        &>div {
+            display: block;
+            overflow-y: scroll;
+            height: 70vh;
+            --mask: linear-gradient(180deg,
+                    rgba(0, 0, 0, 1) 0,
+                    rgba(0, 0, 0, 1) 90%,
+                    rgba(0, 0, 0, 0) 100%) 0% 0% / 100% 100% repeat-x;
+
+            -webkit-mask: var(--mask);
+            mask: var(--mask);
+
+        }
     }
 
     .section-under-construction {
@@ -74,16 +96,25 @@
         margin: 1rem;
         box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.8);
     }
-    @media screen and (max-width: 1024px){
+
+    @media screen and (max-width: 1024px) {
         .section-pages {
             grid-template-columns: 1fr;
-            grid-template-rows: 120rem 1fr;
+            grid-template-rows: max-content max-content;
             overflow-y: scroll;
+
+            &>div {
+                overflow-y: hidden;
+                height: max-content;
+
+            }
+
             padding: 0;
+
         }
-        
     }
-    @media screen and (max-width: 768px) {
+
+    @media screen and (max-width: 1024px) {
         .section-table-of-contains-intro {
             display: none;
         }

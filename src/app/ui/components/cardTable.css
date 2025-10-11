@@ -1,8 +1,24 @@
+.card-table-container {
+    background-color: rgba(0, 0, 0, 0.42);
+    padding: 1.4rem 1rem;
+    margin: 1rem 0.4rem;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8);
+
+    &>span {
+        color: rgb(224, 224, 224);
+    }
+}
+
 .card-table {
     position: relative;
     display: grid;
-    background-color: rgba(0,0, 0, 0.42);
-    padding: 1rem;
-    margin: 1rem 0.4rem;
-    box-shadow: 4px 4px 0px rgba(0,0, 0, 0.8);
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .card-table {
+        grid-template-columns: 1fr;
+
+    }
 }

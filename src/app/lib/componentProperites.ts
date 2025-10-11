@@ -13,16 +13,30 @@ interface PageFooterProperties {
     currentPage: NonNullable<number>;
 }
 interface CardTableProperties {
+    title: NonNullable<string>;
+    subtitle: NonNullable<string>;
     children: ReactNode;
 }
 interface ProgressBarProperties {
     progression: NonNullable<number>; // [0,1]
+    proportions: NonNullable<number>;
 }
 interface ProgressionCardProperties {
     title: NonNullable<string>;
     description: NonNullable<string>;
     progression: NonNullable<number>; // [0,1]
+    proportions: NonNullable<number>;
     // collapsed: NonNullable<boolean>;
     // vertical: NonNullable<boolean>;
 }
-export type { ChapterLinkProperties, PageFooterProperties, CardTableProperties, ProgressBarProperties, ProgressionCardProperties }
+interface GalleryCardProperties {
+    title: NonNullable<string>;
+    subtitle: NonNullable<string>;
+    description: NonNullable<string>;
+    src: NonNullable<string>;
+}
+
+interface GalleryProperties {
+    children: ReactNode;
+}
+export type { ChapterLinkProperties, PageFooterProperties, CardTableProperties, ProgressBarProperties, ProgressionCardProperties, GalleryCardProperties, GalleryProperties }

@@ -12,6 +12,7 @@ function ArtPage() {
             </section>
             <section className="section-pages">
                 <div>
+                    <Image src="/imgs/forest.jpg" alt="forest" width={612} height={408} className="image-header shadowed" />
                     <h5>Overview</h5>
                 </div>
                 <div>

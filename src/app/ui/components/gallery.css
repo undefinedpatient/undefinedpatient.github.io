@@ -1,0 +1,13 @@
+.gallery {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.gallery-card{
+    
+}

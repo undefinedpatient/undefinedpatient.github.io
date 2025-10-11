@@ -1,4 +1,9 @@
 .page-footer {
+    position:absolute;
+    bottom: 2rem;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    z-index: 1;
+
 }

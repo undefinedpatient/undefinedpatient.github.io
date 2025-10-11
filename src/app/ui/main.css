@@ -42,7 +42,7 @@
     }
 
     .main-philosophy {
-      grid-template-columns: 1fr 0fr;
+      grid-template-columns: 1fr;
     }
 
   }

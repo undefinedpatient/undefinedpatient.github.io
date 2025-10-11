@@ -10,12 +10,8 @@ function IndividualArtPage() {
             <section>
                 <h3 className="shadowed">Art</h3>
             </section>
-            <section className="section-pages">
-                <div>
-                    <h5>Individual Arts</h5>
-                </div>
-                <div>
-                </div>
+            <section className="section-under-construction">
+                <h5 className="shadowed">Under Construction ,_,</h5>
             </section>
             <PageFooter previousUrl="/art/gallery" currentPage={8} nextUrl="/art/collaborative-arts" />
         </main>
