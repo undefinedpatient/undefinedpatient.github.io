@@ -59,8 +59,25 @@
     .section-page-single {
         display: flex;
         flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        overflow: scroll;
+        scrollbar-width: none;
         transition: all var(--animation-time-medium) ease;
         padding: 1rem;
+        --horizontal-mask:
+            linear-gradient(90deg,
+                rgba(0, 0, 0, 0) 0%,
+                rgba(0, 0, 0, 1) 10%,
+                rgba(0, 0, 0, 1) 90%,
+                rgba(0, 0, 0, 0) 100%) 0% 0% / 100% 100% repeat-x;
+        --vertical-mask:
+            linear-gradient(180deg,
+                rgba(0, 0, 0, 0) 0%,
+                rgba(0, 0, 0, 1) 10%,
+                rgba(0, 0, 0, 1) 90%,
+                rgba(0, 0, 0, 0) 100%) 0% 0% / 100% 100% repeat-x;
+        mask: var(--horizontal-mask);
     }
 
     .section-pages {
@@ -69,19 +86,16 @@
         grid-template-rows: 1fr;
         gap: 4rem;
         transition: all var(--animation-time-medium) ease;
-        padding: 1rem;
+        --mask: linear-gradient(180deg,
+                rgba(0, 0, 0, 1) 10%,
+                rgba(0, 0, 0, 1) 90%,
+                rgba(0, 0, 0, 0) 100%) 0% 0% / 100% 100% repeat-x;
+        mask: var(--mask);
 
         &>div {
             display: block;
             overflow-y: scroll;
-            height: 70vh;
-            --mask: linear-gradient(180deg,
-                    rgba(0, 0, 0, 1) 0,
-                    rgba(0, 0, 0, 1) 90%,
-                    rgba(0, 0, 0, 0) 100%) 0% 0% / 100% 100% repeat-x;
-
-            -webkit-mask: var(--mask);
-            mask: var(--mask);
+            height: 72vh;
 
         }
     }
@@ -98,33 +112,30 @@
     }
 
     @media screen and (max-width: 1024px) {
+        .section-table-of-contains-intro {
+            display: none;
+        }
         .section-pages {
             grid-template-columns: 1fr;
             grid-template-rows: max-content max-content;
             overflow-y: scroll;
-
             &>div {
                 overflow-y: hidden;
                 height: max-content;
 
             }
-
             padding: 0;
+        }
 
+        .section-page-single {
+            mask: var(--vertical-mask);
         }
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-height: 480px) {
         .section-table-of-contains-intro {
             display: none;
         }
-    }
-
-    @media screen and (max-height: 640px) {
-        .section-table-of-contains-intro {
-            display: none;
-        }
-
         .section-book-cover {
             padding: 8rem 2rem 2rem 2rem;
         }

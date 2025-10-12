@@ -1,9 +1,12 @@
 .page-footer {
-    position:absolute;
+    position: absolute;
     bottom: 2rem;
-    width: 100%;
+    left: 1rem;
     display: flex;
     justify-content: space-between;
+    /* width: 100%; */
+    min-width: calc(100% - 2rem);
+    flex-wrap: nowrap;
+    text-wrap: nowarp;
     z-index: 1;
-
 }

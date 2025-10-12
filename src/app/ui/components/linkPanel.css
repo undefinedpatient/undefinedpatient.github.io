@@ -1,0 +1,7 @@
+.link-panel{
+    position: absolute;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 1rem;
+    top: 1rem;
+}

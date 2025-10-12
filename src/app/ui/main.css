@@ -32,19 +32,28 @@
 
   .main-pages {
     display: grid;
+    width: 100%;
     padding: 2rem 4rem;
     grid-template-rows: 4rem 1fr 2rem;
   }
 
-  @media screen and (max-width: 1024) {
+  @media screen and (max-width: 1024px) {
     .main-table-of-contents {
       grid-template-columns: 1fr;
     }
 
     .main-philosophy {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 0fr;
     }
 
+    .main-pages {
+      padding: 2rem 0.1rem;
+    }
+  }
+  @media screen and (max-height: 480px) {
+    .main-pages {
+      padding: 1rem 1rem;
+    }
   }
 
 }
