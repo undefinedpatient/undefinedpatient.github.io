@@ -1,1 +1,0 @@
-(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,90392,e=>{"use strict";e.s(["default",()=>s]);var t=e.i(43476);let s=function(){return(0,t.jsx)("main",{className:"flex justify-between items-center",children:(0,t.jsx)("h3",{className:"flex-1",children:"Loading..."})})}}]);
