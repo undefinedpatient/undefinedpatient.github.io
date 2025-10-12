@@ -5,7 +5,7 @@ import Gallery from "@/app/components/Gallery";
 import GalleryCard from "@/app/components/GalleryCard";
 import ArtLinkPanel from "@/app/components/ArtLinkPanel";
 
-import paperImage from "@/../public/imgs/paper_texture.jpg";
+import paperImage from "@/../public/imgs/paper_texture.webp";
 
 import lightingImage from "@/../public/imgs/lighting.jpg";
 import riggingImage from "@/../public/imgs/rigging.jpg";

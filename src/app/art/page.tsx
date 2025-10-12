@@ -5,8 +5,8 @@ import CardTable from "../components/CardTable";
 import ProgressionCard from "../components/ProgressionCard";
 import ArtLinkPanel from "../components/ArtLinkPanel";
 
-import paperImage from "@/../public/imgs/paper_texture.jpg";
-import forestImage from "@/../public/imgs/forest.jpg";
+import paperImage from "@/../public/imgs/paper_texture.webp";
+import forestImage from "@/../public/imgs/forest.webp";
 import Link from "next/link";
 import SubSectionHeader from "../components/SubSectionHeader";
 function ArtPage() {

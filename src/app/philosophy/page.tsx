@@ -3,7 +3,7 @@ import Link from "next/link";
 import PageFooter from "@/app/components/PageFooter";
 import { playfair_display } from "../ui/fonts";
 
-import philosohyImage from "@/../public/imgs/philosophy.jpg";
+import philosohyImage from "@/../public/imgs/philosophy.webp";
 function PhilosophyPage() {
     return (
         <main className={`${playfair_display.className} main-philosophy`}>

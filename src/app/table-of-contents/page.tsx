@@ -4,7 +4,7 @@ import { playfair_display } from "../ui/fonts";
 import PageFooter from "../components/PageFooter";
 import ChapterLink from "../components/ChapterLink";
 
-import tableImage from "@/../public/imgs/tableOfContent.jpg";
+import tableImage from "@/../public/imgs/tableOfContent.webp";
 function TableOfContentsPage() {
     return (
         <main className={`${playfair_display.className} main-table-of-contents`}>

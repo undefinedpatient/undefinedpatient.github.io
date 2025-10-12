@@ -2,7 +2,7 @@ import Image from "next/image";
 import { playfair_display } from "@/app/ui/fonts";
 import PageFooter from "@/app/components/PageFooter";
 
-import paperImage from "@/../public/imgs/paper_texture.jpg";
+import paperImage from "@/../public/imgs/paper_texture.webp";
 
 function CollaborativeArtPage() {
     //Shows array of page options

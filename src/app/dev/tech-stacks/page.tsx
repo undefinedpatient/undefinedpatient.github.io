@@ -5,7 +5,7 @@ import CardTable from "@/app/components/CardTable";
 import ProgressionCard from "@/app/components/ProgressionCard";
 import DevLinkPanel from "@/app/components/DevLinkPanel";
 
-import paperImage from "@/../public/imgs/paper_texture.jpg";
+import paperImage from "@/../public/imgs/paper_texture.webp";
 import SubSectionHeader from "@/app/components/SubSectionHeader";
 
 function TechStacksPage() {

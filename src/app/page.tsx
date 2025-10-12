@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { doto, playfair_display } from "@/app/ui/fonts";
 
-import bookCoverImage from "@/../public/imgs/bookCover.jpg";
+import bookCoverImage from "@/../public/imgs/bookCover.webp";
 
 export default function BookCover() {
   return (

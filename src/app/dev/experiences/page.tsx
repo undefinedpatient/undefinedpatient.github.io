@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { fira_code } from "@/app/ui/fonts";
 import PageFooter from "@/app/components/PageFooter";
-import paperImage from "@/../public/imgs/paper_texture.jpg";
+import paperImage from "@/../public/imgs/paper_texture.webp";
 
 function DevExperiencesPage() {
     //Shows array of page options
