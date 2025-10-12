@@ -10,7 +10,7 @@ export default function BookCover() {
       <Image src={bookCoverImage} placeholder="blur" alt="" className="image-background" width={1920} height={1080} />
       <section className="section-book-cover">
         <span className="p-4 text-3xl absolute top-4 lg:right-4">Twenty Anniversary Edition</span>
-        <header className="flex-4">
+        <header className="">
           <h1 className="letter-spacing-animated">Patient</h1>
           <hr className="hr-animated-lr w-[min(100%,24rem)]"/>
           <span className={`${doto.className} text-3xl`}>Programmer | Artist</span>
@@ -18,7 +18,7 @@ export default function BookCover() {
             The Journey of a autistic mind attempting to live a meaningful life. 
           </p>
         </header>
-        <Link className={`${playfair_display.className} link-underline-animated text-3xl flex-1`} href='/table-of-contents'>Start Reading &rarr;</Link>
+        <Link className={`${playfair_display.className} link-underline-animated text-3xl`} href='/table-of-contents'>Start Reading &rarr;</Link>
 
       </section>
     </main>
