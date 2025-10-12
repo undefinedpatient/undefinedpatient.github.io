@@ -20,7 +20,7 @@
     min-height: 8rem;
     overflow: hidden;
     transition: all var(--animation-time-medium) ease;
-    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8);
 
     & h4 {
         position: relative;
@@ -62,7 +62,7 @@
     &:hover {
         flex: 2;
         transform: scale(1.01);
-        box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.4);
+        box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.8);
 
         &::before {
             right: 0;

@@ -21,27 +21,30 @@ function ArtPage() {
             <section className="section-pages">
                 <div>
                     <Image src={forestImage} placeholder="blur" alt="forest" width={612} height={408} className="image-header shadowed" />
-                    <hr />
                     <SubSectionHeader text="Overview" colour="black" size="large" />
                     <p>
-                        Hello! I am a apiring artist who focus in Blender and deliver art in blocky yet realistic style!<br />
-                        &emsp;Inspired by EnchantedMob, Ekscoaster, Squared Media and many other talented artists, I decided to
+                        &emsp;&emsp;Hello! I am a apiring artist who focus in Blender and deliver art in blocky yet realistic style!<br />
+                        &emsp;&emsp;Inspired by EnchantedMob, Ekscoaster, Squared Media and many other talented artists, I decided to
                         embark on the path of art since the very begining of my youth. Starting by learning
-                        <Link target="_blank" href="https://www.mineimator.com/"> Mine-Imator </Link> from around 2022, then hopped
-                        onto Blender at 2023 by the time I admitted into University, and now I have 2 years of Blender experiences!
+                        &nbsp;<Link target="_blank" href="https://www.mineimator.com/" className="underline">Mine-Imator</Link>
+                        &nbsp;from around 2022, then hopped onto
+                        &nbsp;<Link target="_blank" href="https://www.blender.org/" className="underline">Blender</Link>
+                        &nbsp;at 2023 by the time I admitted into University, and now I have 2 years of Blender experiences!
                     </p>
                     <SubSectionHeader text="Commission" colour="green" size="medium" />
-                    <p>I have never tried Commissions and have a very low chance will be, cause I am overwhelmed by school works </p>
+                    <p>
+                        &emsp;&emsp;I have never tried Commissions and have a very low chance will be, cause I am overwhelmed by school works.
+                    </p>
                     <br />
                     <SubSectionHeader text="Support Me!" colour="yellow" size="small" />
                     <p>
-                        Simple! Check out the link at the top-right of your screen!
+                        &emsp;&emsp;Simple! Check out the link at the top-right of your screen!
                         and follow where they might leading you to!
+                        <br />
+                        <br />
+                        <br />
+                        <br />
                     </p>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
                 </div>
                 <div>
                     <CardTable title="Blender" subtitle="# Relative index based on familities">
@@ -53,10 +56,6 @@ function ArtPage() {
                         <ProgressionCard title="Lighting" description="Blender" progression={0.7} proportions={8} />
                         <ProgressionCard title="Set Building" description="Blender" progression={0.8} proportions={8} />
                     </CardTable>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
                 </div>
             </section>
             <PageFooter previousUrl="/dev/tech-stacks" currentPage={6} nextUrl="/art/gallery" />

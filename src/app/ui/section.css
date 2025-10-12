@@ -27,11 +27,20 @@
         overflow-y: scroll;
         backdrop-filter: blur(4px);
         box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.8);
-
+        scrollbar-width: none;
         & p:first-child {
             text-orientation: sideways;
             writing-mode: sideways-lr;
         }
+
+        /* & p {
+            --mask: linear-gradient(180deg,
+                    rgba(0, 0, 0, 1) 10%,
+                    rgba(0, 0, 0, 1) 90%,
+                    rgba(0, 0, 0, 0) 100%) 0% 0% / 100% 100% repeat-x;
+            mask: var(--mask);
+
+        } */
     }
 
     .section-table-of-contents {
@@ -55,6 +64,9 @@
         background-color: rgba(0, 0, 0, 0.42);
         backdrop-filter: blur(4px);
         box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.8);
+        & * {
+            scrollbar-width: none;
+        }
     }
 
     .section-page-single {
@@ -93,14 +105,17 @@
                 rgba(0, 0, 0, 1) 90%,
                 rgba(0, 0, 0, 0) 100%) 0% 0% / 100% 100% repeat-x;
         mask: var(--mask);
+        scrollbar-width: none;
 
         &>div {
             display: flex;
+            gap: 1rem;
             flex-direction: column;
             overflow-y: scroll;
+            padding-bottom: 2rem;
+            min-height: max-content;
             height: 72vh;
             scrollbar-width: none;
-
         }
     }
 
@@ -119,15 +134,18 @@
         .section-table-of-contains-intro {
             display: none;
         }
+
         .section-pages {
             grid-template-columns: 1fr;
             grid-template-rows: max-content max-content;
             overflow-y: scroll;
+
             &>div {
                 overflow-y: hidden;
                 height: max-content;
 
             }
+
             padding: 0;
         }
 
@@ -140,6 +158,7 @@
         .section-table-of-contains-intro {
             display: none;
         }
+
         .section-book-cover {
             padding: 8rem 2rem 2rem 2rem;
         }
