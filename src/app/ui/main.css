@@ -38,18 +38,29 @@
   }
 
   @media screen and (max-width: 1024px) {
+    .main-book-cover {
+      padding: 1rem 1rem;
+      margin: 1rem;
+    }
+
     .main-table-of-contents {
       grid-template-columns: 1fr;
+      padding: 1rem 1rem;
+      margin: 1rem;
     }
 
     .main-philosophy {
       grid-template-columns: 1fr 0fr;
+      padding: 1rem 1rem;
+      margin: 1rem;
     }
 
     .main-pages {
       padding: 4rem 0.4rem;
+      margin: 1rem;
     }
   }
+
   @media screen and (max-height: 480px) {
     .main-pages {
       padding: 2rem 1rem;

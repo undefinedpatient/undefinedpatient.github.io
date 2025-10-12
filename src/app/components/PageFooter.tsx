@@ -8,13 +8,13 @@ function PageFooter(props: PageFooterProperties) {
             {props.previousUrl == "" ?
                 <span></span>
                 :
-                <Link href={props.previousUrl} className="link-underline-animated-to-left">&larr; Previous Page</Link>
+                <Link href={props.previousUrl} className="link-underline-animated-to-left">Previous Page</Link>
             }
             <span>{props.currentPage}</span>
             {props.nextUrl == "" ?
                 <span></span>
                 :
-                <Link href={props.nextUrl} className="link-underline-animated-to-right">Next Page &rarr;</Link>
+                <Link href={props.nextUrl} className="link-underline-animated-to-right">Next Page</Link>
             }
         </section>
     )
