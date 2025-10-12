@@ -31,6 +31,10 @@ function ArtPage() {
                         &nbsp;<Link target="_blank" href="https://www.blender.org/" className="underline">Blender</Link>
                         &nbsp;at 2023 by the time I admitted into University, and now I have 2 years of Blender experiences!
                     </p>
+                    <p>
+                        &emsp;&emsp;Everyone loves Blender—and for me, it&#39;s part of my daily rhythm. I&#39;ve learned nearly everything through it. 
+                        The process of creating art can be tedious and even painful at times, but the moment your characters come to life, every struggle becomes worth it.
+                    </p>
                     <SubSectionHeader text="Commission" colour="green" size="medium" />
                     <p>
                         &emsp;&emsp;I have never tried Commissions and have a very low chance will be, cause I am overwhelmed by school works.

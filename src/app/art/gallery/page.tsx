@@ -68,7 +68,7 @@ function GalleryPage() {
                     subtitle="" />
                 </Gallery>
             </section>
-            <PageFooter previousUrl="/art" currentPage={7} nextUrl="/art/individual-arts" />
+            <PageFooter previousUrl="/art" currentPage={7} nextUrl="/" />
         </main>
     )
 }

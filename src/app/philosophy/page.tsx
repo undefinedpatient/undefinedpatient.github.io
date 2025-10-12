@@ -22,7 +22,7 @@ function PhilosophyPage() {
                     </p>
                     <br />
                     <p>
-                        &emsp;&emsp;I do read some books, whenever I get spare time &#40;Which I do not&#41; I will read, currently enlightened by Lovecraft.
+                        &emsp;&emsp;Books? I do read some books, I even want to write one, whenever I get spare time &#40;Which I do not&#41; I will read, currently enlightened by Lovecraft.
                     </p>
                     <br />
                     <p>
@@ -30,19 +30,15 @@ function PhilosophyPage() {
                     </p>
                     <br />
                     <p>
-                        &emsp;&emsp;Cat? Cat is the utlimate god we should all adore and admire. The fattier the better.
+                        &emsp;&emsp;Genders? There are two! only two! How deep must the insecurity run for someone to invent a whole new belief system just to feel included? Honestly, just be confident, I am more self-assured than they are
                     </p>
                     <br />
                     <p>
-                        &emsp;&emsp;AI? Sorry I do not have much interest in it, just a bunch of neurons, nothing else but a trend, but if I got 48hours a day I would definitely learn it.
+                        &emsp;&emsp;Cat? The utlimate god we all obey. I am a Cat person.
                     </p>
                     <br />
                     <p>
-                        &emsp;&emsp;DEI? How deep must the insecurity run for someone to invent a whole new belief system just to feel included? Honestly, just be confident, I am more self-assured than they are
-                    </p>
-                    <br />
-                    <p>
-                        &quot;Discipline pairs with Freedom, without Freedom, you do not need it, without discipline, you do not deserve it&quot;
+                        &quot;Discipline pairs with Freedom, without Freedom, you do not need it, without discipline, you do not deserve it!&quot;
                     </p>
                 </div>
                 <hr className="hr-animated-lr" />

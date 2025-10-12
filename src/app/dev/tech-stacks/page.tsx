@@ -38,7 +38,7 @@ function TechStacksPage() {
                     </CardTable>
                 </div>
             </section>
-            <PageFooter previousUrl="/dev/experiences" currentPage={5} nextUrl="/art" />
+            <PageFooter previousUrl="/dev" currentPage={5} nextUrl="/art" />
         </main>
     )
 }

@@ -42,8 +42,8 @@ function DevPage() {
                     <Link target="_blank" href="https://github.com/undefinedpatient/hurdleOver" className="underline">Github Repository</Link>
                     <SubSectionHeader text="IdeaCache (2025)" colour="blue" size="small" />
                     <p>
-                        &emsp;&emsp; This project aimed to solved the problem that I always forgot what to do; using flutter framework I built
-                        a window/android crossplatform application where you can store your own ideas quickly before they faded away!
+                        &emsp;&emsp; This project was designed to solve a personal challenge: I often forgot what I needed to do. Using the Flutter framework, 
+                        I developed a cross-platform application for Windows and Android that allows users to quickly capture and store their ideas before they fade away.
                     </p>
                     <Link target="_blank" href="https://github.com/undefinedpatient/idea_cache" className="underline">Github Repository</Link>
                     <SubSectionHeader text="Computer Graphics" colour="red" size="medium" />
@@ -65,7 +65,7 @@ function DevPage() {
                     </CardTable>
                 </div>
             </section>
-            <PageFooter previousUrl="/philosophy" currentPage={3} nextUrl="/dev/experiences" />
+            <PageFooter previousUrl="/philosophy" currentPage={3} nextUrl="/dev/tech-stacks" />
         </main>
     )
 }
