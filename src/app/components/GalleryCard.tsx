@@ -8,7 +8,7 @@ function GalleryCard(props: GalleryCardProperties) {
             <hr/>
             <span>{props.subtitle}</span>
             <p>{props.description}</p>
-            <Image src={props.src} alt="" fill={true} />
+            <Image src={props.src} placeholder="blur" alt="" fill={true} />
         </div>
     );
 }

@@ -2,11 +2,13 @@ import Image from "next/image";
 import { playfair_display } from "@/app/ui/fonts";
 import PageFooter from "@/app/components/PageFooter";
 
+import paperImage from "@/../public/imgs/paper_texture.jpg";
+
 function CollaborativeArtPage() {
     //Shows array of page options
     return (
         <main className={`${playfair_display.className} main-pages`}>
-            <Image src="/imgs/paper_texture.jpg" alt="" className="image-background" width={1920} height={1080}></Image>
+            <Image src={paperImage} placeholder="blur" alt="" className="image-background" width={1920} height={1080}></Image>
             <section>
                 <h3 className="shadowed">Art</h3>
             </section>

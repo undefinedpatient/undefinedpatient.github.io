@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import { ReactNode } from "react";
 
 export interface ChapterLinkProperties {
@@ -33,7 +34,7 @@ export interface GalleryCardProperties {
     title: NonNullable<string>;
     subtitle: NonNullable<string>;
     description: NonNullable<string>;
-    src: NonNullable<string>;
+    src: StaticImageData;
 }
 
 export interface GalleryProperties {
@@ -42,4 +43,10 @@ export interface GalleryProperties {
 
 export interface LinkPanelProperties {
     children: ReactNode;
+}
+
+export interface SubSectionHeaderProperties{
+    text: NonNullable<string>;
+    size: "large" | "medium" | "small";
+    colour: "black" | "yellow" | "red" | "blue" | "green" | "white";
 }

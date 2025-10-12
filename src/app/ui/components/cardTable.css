@@ -1,11 +1,18 @@
 .card-table-container {
+    position: relative;
+    width: 98%;
+    align-self: center;
     background-color: rgba(0, 0, 0, 0.42);
     padding: 1.4rem 1rem;
     margin: 1rem 0.4rem;
-    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8);
-
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.8);
+    transition: all var(--animation-time-short) ease;
     &>span {
         color: rgb(224, 224, 224);
+    }
+    &:hover{
+        transform: translate(-2px, -2px);
+        box-shadow: 12px 12px 0 rgba(0, 0, 0, 0.8);
     }
 }
 

@@ -4,14 +4,15 @@ import { playfair_display } from "../ui/fonts";
 import PageFooter from "../components/PageFooter";
 import ChapterLink from "../components/ChapterLink";
 
+import tableImage from "@/../public/imgs/tableOfContent.jpg";
 function TableOfContentsPage() {
     return (
         <main className={`${playfair_display.className} main-table-of-contents`}>
-            <Image src="/imgs/tableOfContent.jpg" alt="" className="image-background" width={1920} height={1080} />
+            <Image src={tableImage} placeholder="blur" alt="" className="image-background" width={1920} height={1080} />
             <section className="section-table-of-contains-intro">
                 <p className="text-3xl">Disordered Patient</p>
                 <p className="max-w-[48ch]">
-                    <span className="text-2xl">About the Author</span>
+                    <h5 className="letter-spacing-animated">About the Author</h5>
                     <hr className="hr-animated-lr" />
                     &emsp;Patient (Ethan, Choi), born in 2005, discovered early on the joy of creation and the transformative power of computers. Inspired by the possibilities they unlock, he began his journey into the worlds of art and computer science at the age of 18.
                     <br />

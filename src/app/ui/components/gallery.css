@@ -25,7 +25,10 @@
     & h4 {
         position: relative;
         z-index: 1;
+        letter-spacing: initial;
+        transition: all var(--animation-time-medium) ease;
     }
+
     & hr,
     & p,
     & span {
@@ -59,10 +62,16 @@
     &:hover {
         flex: 2;
         transform: scale(1.01);
+        box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.4);
 
         &::before {
             right: 0;
         }
+
+        & h4 {
+            letter-spacing: 0.2rem;
+        }
+
         & hr,
         & p,
         & span {
@@ -76,6 +85,7 @@
         flex-direction: column;
         width: 100%;
     }
+
     .gallery-card {
         width: 100%;
     }

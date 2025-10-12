@@ -6,12 +6,19 @@
 @layer components{
   img.shadowed {
     box-shadow: 8px 8px 0 rgba(0,0,0,0.8);
+    transition: all var(--animation-time-short) ease;
+    &:hover{
+        transform: translate(-2px, -2px);
+        box-shadow: 12px 12px 0 rgba(0, 0, 0, 0.8);
+
+    }
   }
   .image-header{
     position: relative;
-    width:  99%;
+    align-self: center;
+    width:  96%;
     height: 12rem;
-    margin: 0rem 0rem 1rem 0rem;
+    margin: 1rem 0rem 1rem 0rem;
     object-fit: cover;
 
   }

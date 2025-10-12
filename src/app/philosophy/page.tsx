@@ -3,12 +3,13 @@ import Link from "next/link";
 import PageFooter from "@/app/components/PageFooter";
 import { playfair_display } from "../ui/fonts";
 
+import philosohyImage from "@/../public/imgs/philosophy.jpg";
 function PhilosophyPage(){
     return (
         <main className={`${playfair_display.className} main-philosophy`}>
-            <Image src="/imgs/philosophy.jpg" alt="" className="image-background" width={1920} height={1080}></Image>
+            <Image src={philosohyImage} placeholder="blur" alt="" className="image-background" width={1920} height={1080}></Image>
             <section className="section-philosophy">
-                <h2>Philosophy</h2>
+                <h2 className="letter-spacing-animated">Philosophy</h2>
                 <hr className="hr-animated-rl"/>
                 <div className="overflow-y-scroll">
                     <p className="p-4">

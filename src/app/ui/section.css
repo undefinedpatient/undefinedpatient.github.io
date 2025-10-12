@@ -41,6 +41,7 @@
         justify-content: space-evenly;
         width: fit-content;
         overflow: scroll;
+        scrollbar-width: none;
         text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
     }
 
@@ -81,6 +82,7 @@
     }
 
     .section-pages {
+        position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
@@ -93,9 +95,11 @@
         mask: var(--mask);
 
         &>div {
-            display: block;
+            display: flex;
+            flex-direction: column;
             overflow-y: scroll;
             height: 72vh;
+            scrollbar-width: none;
 
         }
     }

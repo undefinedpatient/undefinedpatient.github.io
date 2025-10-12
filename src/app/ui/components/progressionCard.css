@@ -3,14 +3,19 @@
     flex-direction: column;
     padding: 1rem;
     background-color: rgba(0, 0, 0, 0.8);
-    transition: all var(--animation-time-medium) ease;
     letter-spacing: 0rem;
+    transition: all var(--animation-time-medium) ease;
+
+    & h6 {
+        transition: all var(--animation-time-medium) ease;
+    }
 
     &:hover {
         & h6 {
             letter-spacing: 0.1rem;
             font-weight: bold;
         }
+
         transform: scale(1.01);
     }
 }

@@ -8,6 +8,19 @@
 }
 
 @layer components{
+    .link-svg {
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        transition: all var(--animation-time-medium) ease;
+        &>img{
+            color: white;
+            filter: invert(100%);
+        }
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
     .link-underline-animated-to-left{
         position: relative;
         right: 0;

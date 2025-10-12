@@ -47,12 +47,12 @@
     }
 
     .main-pages {
-      padding: 2rem 0.1rem;
+      padding: 4rem 0.4rem;
     }
   }
   @media screen and (max-height: 480px) {
     .main-pages {
-      padding: 1rem 1rem;
+      padding: 2rem 1rem;
     }
   }
 

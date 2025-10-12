@@ -2,6 +2,15 @@
     position: absolute;
     display: flex;
     background-color: rgba(0, 0, 0, 0.5);
-    left: 1rem;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.8);
+    gap: 1rem;
+    right: 1rem;
     top: 1rem;
+    padding: 1rem 1rem;
+    transition: all var(--animation-time-short) ease;
+    &:hover{
+        transform: translate(-2px, -2px);
+        box-shadow: 12px 12px 0 rgba(0, 0, 0, 0.8);
+
+    }
 }
