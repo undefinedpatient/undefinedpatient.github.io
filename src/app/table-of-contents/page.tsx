@@ -22,7 +22,7 @@ function TableOfContentsPage() {
                     <a href="https://hkust.edu.hk/" className="underline">
                         Hong Kong University of Science and Technology
                     </a>
-                    &nbsp;where he maintains a CGA above 3.6 out of 4.3, which is below-average amongst COMP students.
+                    &nbsp;where he currently study COMP3031 Scala3 COMP3711 Algorithm COMP3511 OS.
                     <br />
                     <br />
                     <hr className="hr-animated-lr" />
