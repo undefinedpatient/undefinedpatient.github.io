@@ -23,7 +23,7 @@ function ArtPage() {
                     <Image src={forestImage} placeholder="blur" alt="forest" width={612} height={408} className="image-header shadowed" />
                     <SubSectionHeader text="Overview" colour="black" size="large" />
                     <p>
-                        &emsp;&emsp;Hello! I am a apiring artist who focus in Blender and deliver art in blocky yet realistic style!<br />
+                        &emsp;&emsp;Hello! I&#39;m an aspiring artist specializing in Blender, known for crafting blocky yet strikingly realistic visuals.<br />
                         &emsp;&emsp;Inspired by EnchantedMob, Ekscoaster, Squared Media and many other talented artists, I decided to
                         embark on the path of art since the very begining of my youth. Starting by learning
                         &nbsp;<Link target="_blank" href="https://www.mineimator.com/" className="underline">Mine-Imator</Link>

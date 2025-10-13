@@ -30,7 +30,7 @@ function PhilosophyPage() {
                     </p>
                     <br />
                     <p>
-                        &emsp;&emsp;Genders? There are two! only two! How deep must the insecurity run for someone to invent a whole new belief system just to feel included? Honestly, just be confident, I am more self-assured than they are
+                        &emsp;&emsp;Genders? There are two! only two! How deep must the insecurity run for someone to invent a whole new belief system just to feel included? Honestly, just be confident, I am more self-assured than they are.
                     </p>
                     <br />
                     <p>
