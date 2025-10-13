@@ -23,7 +23,7 @@ function TechStacksPage() {
                     <CardTable title="Frontend" subtitle="Relative index based familities and interest and current focused">
                         <ProgressionCard title="Nextjs" description="Using!" progression={0.3} proportions={8}/>
                         <ProgressionCard title="React" description="Using!" progression={0.4} proportions={8}/>
-                        <ProgressionCard title="Nestjs" description="Going to use!" progression={0.1} proportions={8}/>
+                        <ProgressionCard title="FastAPI" description="Going to use!" progression={0.1} proportions={8}/>
                         <ProgressionCard title="Antd" description="Going to use!" progression={0.1} proportions={8}/>
                         <ProgressionCard title="Docker/Docker Compose" description="Going to use!" progression={0.3} proportions={8}/>
                         <ProgressionCard title="Flutter" description="Only used in 1 project" progression={0.7} proportions={8}/>
