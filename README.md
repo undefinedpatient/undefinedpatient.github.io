@@ -13,3 +13,5 @@ This is the third portfolio I have made.
 >> - [Link](https://undefinedpatient.github.io/portfolio-2024/)
 >> - [Repo](https://github.com/undefinedpatient/portfolio-2024)
 >
+
+> &copy; 2025 Patient. All Rights Reserved.
