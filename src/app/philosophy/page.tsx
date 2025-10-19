@@ -16,7 +16,7 @@ function PhilosophyPage() {
                         &emsp;&emsp;I believe I am constantly evolving—reshaping my mindset in pursuit of its final, perfected form. 
                         I hold deep respect for those kind souls who work relentlessly to achieve their goals, and I have little patience for those who speak more than they act. 
                         I admire individuals who challenge trends and resist the pull of ignorance, 
-                        while I observe those who blindly follow popular currents without reflection—and watch them bear the consequences of their own thoughtlessness.
+                        while I espy those who want to achieve something without paying effort or reflection—and watch them bear the consequences of their own thoughtlessness.
                         How entertaining it is!
 
                     </p>
@@ -27,10 +27,6 @@ function PhilosophyPage() {
                     <br />
                     <p>
                         &emsp;&emsp;Bands? Linkin Park, Starset, Thousand Foot Krutch are 3 of my favourites.
-                    </p>
-                    <br />
-                    <p>
-                        &emsp;&emsp;Genders? There are two! only two! How deep must the insecurity run for someone to invent a whole new belief system just to feel included? Honestly, just be confident, I am more self-assured than they are.
                     </p>
                     <br />
                     <p>
