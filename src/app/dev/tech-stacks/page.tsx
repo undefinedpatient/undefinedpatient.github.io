@@ -20,19 +20,18 @@ function TechStacksPage() {
             <section className="section-pages">
                 <div>
                     <SubSectionHeader text="Tech Stacks" colour="blue" size="large" />
-                    <CardTable title="Frontend" subtitle="Relative index based familities and interest and current focused">
-                        <ProgressionCard title="[Nextjs]" description="Desiging" progression={0.3} proportions={8}/>
-                        <ProgressionCard title="[React]" description="Using!" progression={0.4} proportions={8}/>
-                        <ProgressionCard title="FastAPI" description="Going to use!" progression={0.1} proportions={8}/>
+                    <CardTable title="Frontend" subtitle="You can ignore this list, I do not want to be a frameworker, I want to be a engineer, I need the robust fundamental first.">
+                        <ProgressionCard title="Nextjs" description="Desiging" progression={0.3} proportions={8}/>
+                        <ProgressionCard title="React" description="Using!" progression={0.4} proportions={8}/>
                         <ProgressionCard title="Docker/Docker Compose" description="Going to use!" progression={0.3} proportions={8}/>
                         <ProgressionCard title="Flutter" description="Only used in 1 project" progression={0.7} proportions={8}/>
                     </CardTable>
 
                 </div>
                 <div>
-                    <CardTable title="Computer Graphics" subtitle="Relative index based familities and interest and current focused">
+                    <CardTable title="Computer Graphics" subtitle="Hobbies">
+                        <ProgressionCard title="[OpenGL]" description="The plane is rotating!" progression={0.2} proportions={8}/>
                         <ProgressionCard title="ThreeJS" description="Stall" progression={0.0} proportions={8}/>
-                        <ProgressionCard title="[OpenGL]" description="I passed my first ever texBuffer!" progression={0.2} proportions={8}/>
                         <ProgressionCard title="WebGPU" description="Stall" progression={0.0} proportions={8}/>
                         <ProgressionCard title="Vulkan" description="Stall" progression={0.0} proportions={8}/>
                     </CardTable>
