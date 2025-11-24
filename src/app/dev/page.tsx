@@ -53,7 +53,7 @@ function DevPage() {
 
                 </div>
                 <div>
-                    <CardTable title="Programming Languages" subtitle="Current I want to focus on raw primitive language, no fancy stuff please.">
+                    <CardTable title="Programming Languages" subtitle="I am narrowing it down">
                         <ProgressionCard title="[C++]" description="c++26" progression={0.4} proportions={8} />
                         <ProgressionCard title="[Javascript]" description="Weak type!" progression={0.6} proportions={8} />
                         <ProgressionCard title="[Scala3]" description="LPLPLPLPLPLP" progression={0.5} proportions={8} />

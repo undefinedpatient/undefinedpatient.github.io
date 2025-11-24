@@ -20,11 +20,8 @@ function TechStacksPage() {
             <section className="section-pages">
                 <div>
                     <SubSectionHeader text="Tech Stacks" colour="blue" size="large" />
-                    <CardTable title="Frontend" subtitle="You can ignore this list, I do not want to be a frameworker, I want to be a engineer, I need the robust fundamental first.">
-                        <ProgressionCard title="Nextjs" description="Desiging" progression={0.3} proportions={8}/>
-                        <ProgressionCard title="React" description="Using!" progression={0.4} proportions={8}/>
-                        <ProgressionCard title="Docker/Docker Compose" description="Going to use!" progression={0.3} proportions={8}/>
-                        <ProgressionCard title="Flutter" description="Only used in 1 project" progression={0.7} proportions={8}/>
+                    <CardTable title="Frontend" subtitle="Prioritise framework>concept before getting a job is sucks, you do not even know what you are writing.">
+                        <ProgressionCard title="Flutter" description="Only used in 1 project" progression={0.6} proportions={8}/>
                     </CardTable>
 
                 </div>
