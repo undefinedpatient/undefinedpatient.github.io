@@ -27,7 +27,7 @@ function TechStacksPage() {
                 </div>
                 <div>
                     <CardTable title="Computer Graphics" subtitle="Hobbies">
-                        <ProgressionCard title="[OpenGL]" description="The plane is rotating!" progression={0.2} proportions={8}/>
+                        <ProgressionCard title="[OpenGL]" description="So all transformation are inversed..." progression={0.3} proportions={8}/>
                         <ProgressionCard title="ThreeJS" description="Stall" progression={0.0} proportions={8}/>
                         <ProgressionCard title="WebGPU" description="Stall" progression={0.0} proportions={8}/>
                         <ProgressionCard title="Vulkan" description="Stall" progression={0.0} proportions={8}/>
