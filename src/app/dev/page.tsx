@@ -28,42 +28,44 @@ function DevPage() {
                         captivated by the vast possibility offered by Computer Sciences, especially in the area of Computer Graphics and Frontend Developement
                         I soon enrolled into Compuer Sciences Major in my university.
                     </p>
-                    <SubSectionHeader text="Frontend Development" colour="blue" size="medium" />
+                    <SubSectionHeader text="Projects" colour="black" size="large" />
+                    <SubSectionHeader text="Cursor Snap (2026) [ongoing]" colour="blue" size="small" />
                     <p>
-                        &emsp;&emsp; This is my second most interested topic, not just because of the visual aspect
-                        of frontend development can bring pleasing user experiences when they use the applications. But
-                        also I want to solve some problems.
+                        &emsp;&emsp; There are so many features that need to be implemented within Blender, I have many ideas, this is the beginning.
                     </p>
-                    <SubSectionHeader text="HurdleOver (2025)" colour="blue" size="small" />
+                    <Link target="_blank" href="https://github.com/undefinedpatient/snap-tool" className="underline">Github Repository</Link>
+                    <SubSectionHeader text="smath (2026) [active]" colour="blue" size="small" />
                     <p>
-                        &emsp;&emsp; This served as my first glance into frontend development, as a tutorial-following project, I got a taste of
-                        web development with React, ExpressJs and MongoDB, and eventaully built &#40;but not deploy&#41; my first ever blog-like website!
+                        &emsp;&emsp; Have to build my own math library, to force me to learn! 
                     </p>
-                    <Link target="_blank" href="https://github.com/undefinedpatient/hurdleOver" className="underline">Github Repository</Link>
-                    <SubSectionHeader text="IdeaCache (2025)" colour="blue" size="small" />
+                    <Link target="_blank" href="https://github.com/undefinedpatient/smath" className="underline">Github Repository</Link>
+                    <SubSectionHeader text="IdeaCache (2025) [archived]" colour="blue" size="small" />
                     <p>
                         &emsp;&emsp; This project was designed to solve a personal challenge: I often forgot what I needed to do. Using the Flutter framework, 
                         I developed a cross-platform application for Windows and Android that allows users to quickly capture and store their ideas before they fade away.
                     </p>
-                    <Link target="_blank" href="https://github.com/undefinedpatient/idea_cache" className="underline">Github Repository</Link>
-                    <SubSectionHeader text="Computer Graphics" colour="red" size="medium" />
+                    <Link target="_blank" href="https://github.com/undefinedpatient/hurdleOver" className="underline">Github Repository</Link>
+                    <SubSectionHeader text="HurdleOver (2025) [archived]" colour="blue" size="small" />
                     <p>
-                        &emsp;&emsp; One day, where everything is settled, I will dive deep into it as one of my side hobbies.
+                        &emsp;&emsp; This served as my first glance into frontend development, as a tutorial-following project, I got a taste of
+                        web development with React, ExpressJs and MongoDB, and eventaully built &#40;but not deploy&#41; my first ever blog-like website!
                     </p>
+                    <Link target="_blank" href="https://github.com/undefinedpatient/idea_cache" className="underline">Github Repository</Link>
 
                 </div>
                 <div>
                     <CardTable title="Programming Languages (Active)" subtitle="I begin to know what I need to stick with.">
-                        <ProgressionCard title="C++" description="c++26" progression={0.6} proportions={8} />
-                        <ProgressionCard title="Javascript" description="Weird" progression={0.4} proportions={8} />
+                        <ProgressionCard title="C++" description="smath && retina" progression={0.6} proportions={8} />
+                        <ProgressionCard title="Python" description="blender addon" progression={0.4} proportions={8} />
                     </CardTable>
                     <CardTable title="Programming Languages (Inactive)" subtitle="Simple, the languages I am currently not using/leaving because I no longer get a chance to use!">
+                        <ProgressionCard title="Javascript" description="Weird" progression={0.2} proportions={8} />
                         <ProgressionCard title="Scala3" description="LP" progression={0.6} proportions={8} />
                         <ProgressionCard title="C" description="pthread" progression={0.2} proportions={8} />
                         <ProgressionCard title="Typescript" description="Strong type?" progression={0.1} proportions={8} />
                         <ProgressionCard title="Java" description="Rarely used" progression={0.5} proportions={8} />
                         <ProgressionCard title="Dart" description="Refer to my project" progression={0.5} proportions={8} />
-                        <ProgressionCard title="Python" description="Course focused language" progression={0.1} proportions={8} />
+                        <ProgressionCard title="C?r?o?" description="10+ of year experience perferred" progression={0.0} proportions={8} />
                     </CardTable>
                 </div>
             </section>

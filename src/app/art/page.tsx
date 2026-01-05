@@ -53,10 +53,10 @@ function ArtPage() {
                 <div>
                     <CardTable title="Blender" subtitle="# Relative index based on familities">
                         <ProgressionCard title="Modelling" description="Blender" progression={0.7} proportions={8} />
-                        <ProgressionCard title="Geonodes" description="Blender" progression={0.2} proportions={8} />
+                        <ProgressionCard title="Geonodes" description="Blender" progression={0.3} proportions={8} />
                         <ProgressionCard title="Shadernodes" description="Blender" progression={0.6} proportions={8} />
                         <ProgressionCard title="Rigging" description="Blender" progression={1} proportions={8} />
-                        <ProgressionCard title="Composition" description="Blender" progression={0.2} proportions={8} />
+                        <ProgressionCard title="Composition" description="Blender" progression={0.4} proportions={8} />
                         <ProgressionCard title="Lighting" description="Blender" progression={0.7} proportions={8} />
                         <ProgressionCard title="Set Building" description="Blender" progression={0.8} proportions={8} />
                     </CardTable>
