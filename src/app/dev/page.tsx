@@ -29,11 +29,6 @@ function DevPage() {
                         I soon enrolled into Compuer Sciences Major in my university.
                     </p>
                     <SubSectionHeader text="Projects" colour="black" size="large" />
-                    <SubSectionHeader text="Cursor Snap (2026) [ongoing]" colour="blue" size="small" />
-                    <p>
-                        &emsp;&emsp; There are so many features that need to be implemented within Blender, I have many ideas, this is the beginning.
-                    </p>
-                    <Link target="_blank" href="https://github.com/undefinedpatient/snap-tool" className="underline">Github Repository</Link>
                     <SubSectionHeader text="smath (2026) [active]" colour="blue" size="small" />
                     <p>
                         &emsp;&emsp; Have to build my own math library, to force me to learn! 
