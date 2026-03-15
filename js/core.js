@@ -23,6 +23,7 @@ export class RenderManager {
     this.renderer = new THREE.WebGLRenderer({ canvas: canvas });
     this.renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
     this.renderer.setPixelRatio(window.devicePixelRatio);
+    this.on_resize();
   }
 
   start() {
@@ -46,7 +47,6 @@ export class RenderManager {
     this.camera.aspect = element.clientWidth / element.clientHeight;
     this.camera.updateProjectionMatrix();
     this.renderer.setSize(element.clientWidth, element.clientHeight, false);
-    this.renderer.setPixelRatio(window.devicePixelRatio);
   };
 
   /**
@@ -116,3 +116,5 @@ export class Entity {
     }
   }
 }
+
+export class BackgroundPlane extends Entity {}
