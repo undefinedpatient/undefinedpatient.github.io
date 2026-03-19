@@ -76,7 +76,7 @@ export class RenderManager {
     this.camera.position.set(relative_x / 17, -relative_y / 17, 0.0);
     if (this.scene_manager == null) return;
     this.scene_manager.entities.forEach((entity) => {
-      entity.set_uniform("u_mouse", new THREE.Vector2(relative_x, relative_y));
+      entity.set_uniform("u_mouse", new THREE.Vector2(relative_x, -relative_y));
     });
   };
 }
@@ -172,6 +172,7 @@ export class BackgroundPlane extends Entity {
       },
       vertexShader: shaders.vertexShader,
       fragmentShader: shaders.fragmentShader,
+      glslVersion: THREE.GLSL3,
     });
     const aspect = texture.image.width / texture.image.height;
     const geometry = new THREE.PlaneGeometry(aspect, 1);
