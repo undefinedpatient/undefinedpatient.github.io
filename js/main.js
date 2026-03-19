@@ -16,9 +16,11 @@ async function init() {
     "test",
     "/assets/img/lighting.jpg",
   );
-  background_plane.mesh.position.set(0, 0, -0.5);
+  background_plane.mesh.position.set(0, 0, -0.3);
   background_plane.mesh.updateMatrixWorld();
   scene_manager.add(background_plane);
+  background_plane.update_fill_scale(render_manager.camera);
+  render_manager.on_resize();
 
   // Window event
   window.addEventListener("resize", () => {

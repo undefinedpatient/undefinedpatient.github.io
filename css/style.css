@@ -11,7 +11,7 @@
 		padding: 0px;
 		margin: 0px;
 
-		cursor: url("/assets/img/cursor/cursor-template.png"), pointer;
+		/* cursor: url("/assets/img/cursor/cursor-template.png"), pointer; */
 	}
 
 	:root {
