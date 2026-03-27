@@ -132,6 +132,8 @@
 	}
 
 	main#intro-page {
+		/* Not the first page, initially not displayed */
+		display: none;
 		opacity: 1;
 
 		&.on-exit {
