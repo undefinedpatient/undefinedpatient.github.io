@@ -21,11 +21,12 @@ export class AssetManager {
     }
 
     try {
-      // These imports are handled by vite-plugin-glsl
-      const vertexShader = (await import(`./shaders/${shader_name}.vert?raw`))
-        .default;
-      const fragmentShader = (await import(`./shaders/${shader_name}.frag?raw`))
-        .default;
+      const vertexShader = (
+        await import(`../assets/shaders/${shader_name}.vert?raw`)
+      ).default;
+      const fragmentShader = (
+        await import(`../assets/shaders/${shader_name}.frag?raw`)
+      ).default;
 
       const shaders = { vertexShader, fragmentShader };
       this.shader_cache.set(shader_name, shaders);
