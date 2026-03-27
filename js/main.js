@@ -1,8 +1,8 @@
 "use strct";
 import * as THREE from "three";
+import "./components.js";
 import { BackgroundPlane, RenderManager, SceneManager } from "./core.js";
 import { AssetManager } from "./asset_manager.js";
-import "./components.js";
 import { PageManager } from "./page_manager.js";
 
 const canvas = document.querySelector("#render");

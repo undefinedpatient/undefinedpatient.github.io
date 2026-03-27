@@ -10,6 +10,7 @@ export class AssetManager {
     /** @type {Map<string, THREE.Texture>} */
     this.texture_cache = new Map();
   }
+
   /**
    * @param {string} shader_name - The file name of the shader pair under /assets/shader/ without .vert/.glsl extension.
    * @returns {{vertexShader: string, fragmentShader: string}}
@@ -18,19 +19,22 @@ export class AssetManager {
     if (this.shader_cache.has(shader_name)) {
       return this.shader_cache.get(shader_name);
     }
-    const [vertex_shader_string, frag_shader_string] = await Promise.all([
-      load_text_data(`/assets/shader/${shader_name}.vert`),
-      load_text_data(`/assets/shader/${shader_name}.frag`),
-    ]);
 
-    /** @param {string} shader_name - The file name of the shader pair without .vert/.glsl extension. */
-    const shaders = {
-      vertexShader: vertex_shader_string,
-      fragmentShader: frag_shader_string,
-    };
-    this.shader_cache.set(shader_name, shaders);
+    try {
+      // These imports are handled by vite-plugin-glsl
+      const vertexShader = (await import(`./shaders/${shader_name}.vert?raw`))
+        .default;
+      const fragmentShader = (await import(`./shaders/${shader_name}.frag?raw`))
+        .default;
 
-    return shaders;
+      const shaders = { vertexShader, fragmentShader };
+      this.shader_cache.set(shader_name, shaders);
+
+      return shaders;
+    } catch (err) {
+      console.error(`Failed to load shader pair: ${shader_name}`, err);
+      throw err;
+    }
   }
 
   /**
