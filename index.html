@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 	<title>Patient</title>
@@ -7,6 +7,7 @@
 	<meta name="description" content="Personal Portfolio.">
 	<meta name="keywords" content="portfolio">
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" href="css/style.css">
 	<script type="importmap">
@@ -19,15 +20,22 @@
 </head>
 
 <body>
-	<main>
-		<section id="book-title">
-			<h1>Patient</h1>
-			<hr />
-			<p>Next Edition</p>
-			<br />
-			<button>Start</button>
-		</section>
-	</main>
+	<page-container>
+		<main id="cover-page">
+			<section id="book-title">
+				<h1>Patient</h1>
+				<hr>
+				<br>
+				<hover-text>Under Construction</hover-text>
+			</section>
+		</main>
+		<main id="intro-page">
+			<hover-text>This is roughly the 5-th portfolio webpage I am working on, introducing glsl shader!</hover-text>
+		</main>
+		<main id="art-page">
+			<hover-text>Art Page</hover-text>
+		</main>
+	</page-container>
 	<canvas id="render"></canvas>
 	<script type="module" src="js/main.js"></script>
 </body>

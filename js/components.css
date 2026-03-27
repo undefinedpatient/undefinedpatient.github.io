@@ -1,18 +1,34 @@
 /* Component Style */
-custom-button {
+hover-text {
 	position: relative;
 	display: block;
 
 	width: max-content;
 	height: min-content;
-	border: 2px solid white;
 
 	padding: 1ch;
 	color: white;
-	transition: all 0.2s ease;
+	transition: all 0.3s ease;
 	background-color: transparent;
+	user-select: none;
+
 
 	&:hover {
-		scale: 103%;
+		scale: 110%;
 	}
+}
+
+page-container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	border: 2px solid var(--border-color);
+	box-shadow:
+		0 0 32ch black,
+		0 0 32ch black,
+		0 0 32ch black;
+	transition: all 0.8 ease;
 }

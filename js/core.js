@@ -145,6 +145,9 @@ export class Entity {
   }
 }
 
+/**
+ * @description A background plane that automatically scale up to match the viewport.
+ */
 export class BackgroundPlane extends Entity {
   /** @type {THREE.Texture} */
   texture = null;
@@ -152,37 +155,56 @@ export class BackgroundPlane extends Entity {
    * @param {AssetManager} asset_manager
    */
   static async create(asset_manager, shader_name, texture_abs_path) {
-    const [texture, shaders] = await Promise.all([
-      asset_manager.load_texture(texture_abs_path),
-      asset_manager.load_shader_pair(shader_name),
-    ]);
-    if (texture == null) {
-      throw Error("Texture cannot be loaded");
-    }
-    if (shaders == null) {
-      throw Error("Shaders cannot be loaded");
-    }
+    if (texture_abs_path != null) {
+      const texture = await asset_manager.load_texture(texture_abs_path);
+      const shaders = await asset_manager.load_shader_pair(shader_name);
+      if (texture == null) {
+        throw Error("Text cannot be loaded");
+      }
+      if (shaders == null) {
+        throw Error("Shaders cannot be loaded");
+      }
 
-    const material = new THREE.ShaderMaterial({
-      uniforms: {
-        u_texture: { value: texture },
-        u_mouse: { value: new THREE.Vector2() },
-        u_time: { value: 0 },
-        u_resolution: { value: new THREE.Vector2() },
-      },
-      vertexShader: shaders.vertexShader,
-      fragmentShader: shaders.fragmentShader,
-      glslVersion: THREE.GLSL3,
-    });
-    const aspect = texture.image.width / texture.image.height;
-    const geometry = new THREE.PlaneGeometry(aspect, 1);
-    const entity = new BackgroundPlane(geometry, material);
-    entity.texture = texture;
+      const material = new THREE.ShaderMaterial({
+        uniforms: {
+          u_texture: { value: texture },
+          u_mouse: { value: new THREE.Vector2() },
+          u_time: { value: 0 },
+          u_resolution: { value: new THREE.Vector2() },
+        },
+        vertexShader: shaders.vertexShader,
+        fragmentShader: shaders.fragmentShader,
+        glslVersion: THREE.GLSL3,
+      });
+      const aspect = texture.image.width / texture.image.height;
+      const geometry = new THREE.PlaneGeometry(aspect, 1);
+      const entity = new BackgroundPlane(geometry, material);
+      entity.texture = texture;
 
-    entity.on_update = (delta) => {
-      material.uniforms.u_time.value += delta;
-    };
-    return entity;
+      entity.on_update = (delta) => {
+        material.uniforms.u_time.value += delta;
+      };
+      return entity;
+    } else {
+      const shaders = await asset_manager.load_shader_pair(shader_name);
+      if (shaders == null) {
+        throw Error("Shaders cannot be loaded");
+      }
+      const material = new THREE.ShaderMaterial({
+        uniforms: {
+          // No texture
+          u_mouse: { value: new THREE.Vector2() },
+          u_time: { value: 0 },
+          u_resolution: { value: new THREE.Vector2() },
+        },
+        vertexShader: shaders.vertexShader,
+        fragmentShader: shaders.fragmentShader,
+        glslVersion: THREE.GLSL3,
+      });
+      const geometry = new THREE.PlaneGeometry(1, 1);
+      const entity = new BackgroundPlane(geometry, material);
+      return entity;
+    }
   }
 
   /**
@@ -191,7 +213,6 @@ export class BackgroundPlane extends Entity {
    */
   update_fill_scale(camera) {
     this.mesh.updateMatrixWorld();
-    if (!this.texture.image) return;
     /** @type{THREE.Vector4[]} */
     const ndcs = [];
     const positions = this.mesh.geometry.attributes.position.array;

@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { load_text } from "./utilities.js";
+import { load_text_data } from "./utilities.js";
 
 export class AssetManager {
   constructor() {
@@ -19,8 +19,8 @@ export class AssetManager {
       return this.shader_cache.get(shader_name);
     }
     const [vertex_shader_string, frag_shader_string] = await Promise.all([
-      load_text(`/assets/shader/${shader_name}.vert`),
-      load_text(`/assets/shader/${shader_name}.frag`),
+      load_text_data(`/assets/shader/${shader_name}.vert`),
+      load_text_data(`/assets/shader/${shader_name}.frag`),
     ]);
 
     /** @param {string} shader_name - The file name of the shader pair without .vert/.glsl extension. */
