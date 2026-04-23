@@ -1,65 +1,116 @@
 import * as THREE from "three";
-import { load_text_data } from "./utilities.js";
 
+/**
+ * @typedef {Object} ShaderPair
+ * @property {string} vertexShader - The raw text of the vertex shader.
+ * @property {string} fragmentShader - The raw text of the fragment shader.
+ */
+
+/**
+ * Manages the loading and caching of assets such as WebGL shaders and Three.js textures.
+ * Utilizing this manager prevents redundant network requests and duplicate memory allocation.
+ */
 export class AssetManager {
+  /**
+   * Initializes the asset manager with empty caches and a Three.js texture loader.
+   */
   constructor() {
-    /** @type {THREE.TextureLoader} */
-    this.texture_loader = new THREE.TextureLoader();
-    /** @type {Map<string, {vertexShader: string, fragmentShader: string}>} */
-    this.shader_cache = new Map();
-    /** @type {Map<string, THREE.Texture>} */
-    this.texture_cache = new Map();
+    /**
+     * Loader used to fetch image textures.
+     * @type {THREE.TextureLoader}
+     * @private
+     */
+    this.textureLoader = new THREE.TextureLoader();
+
+    /**
+     * Cache for storing loaded shader pairs.
+     * @type {Map<string, ShaderPair>}
+     * @private
+     */
+    this.shaderCache = new Map();
+
+    /**
+     * Cache for storing loaded and configured textures.
+     * @type {Map<string, THREE.Texture>}
+     * @private
+     */
+    this.textureCache = new Map();
   }
 
   /**
-   * @param {string} shader_name - The file name of the shader pair under /assets/shader/ without .vert/.glsl extension.
-   * @returns {{vertexShader: string, fragmentShader: string}}
+   * Asynchronously loads a vertex and fragment shader pair.
+   * Expects shaders to be located in the `./shaders/` directory and processed using Vite's `?raw` import suffix.
+   *
+   * @param {string} shaderName - The base name of the shader files (without `.vert` or `.frag` extensions).
+   * @returns {Promise<ShaderPair>} A promise that resolves to an object containing the raw shader strings.
+   * @throws {Error} If the shader files cannot be found or loaded.
    */
-  async load_shader_pair(shader_name) {
-    if (this.shader_cache.has(shader_name)) {
-      return this.shader_cache.get(shader_name);
+  async load_shader_pair(shaderName) {
+    // 1. Return cached shaders if they have already been loaded
+    if (this.shaderCache.has(shaderName)) {
+      return this.shaderCache.get(shaderName);
     }
 
     try {
-      const vertexShader = (await import(`./shaders/${shader_name}.vert?raw`))
-        .default;
-      const fragmentShader = (await import(`./shaders/${shader_name}.frag?raw`))
-        .default;
+      // 2. Dynamically import raw shader strings
+      const vertexModule = await import(`./shaders/${shaderName}.vert?raw`);
+      const fragmentModule = await import(`./shaders/${shaderName}.frag?raw`);
 
-      const shaders = { vertexShader, fragmentShader };
-      this.shader_cache.set(shader_name, shaders);
+      const shaders = {
+        vertexShader: vertexModule.default,
+        fragmentShader: fragmentModule.default,
+      };
+
+      // 3. Cache the result for future requests
+      this.shaderCache.set(shaderName, shaders);
 
       return shaders;
-    } catch (err) {
-      console.error(`Failed to load shader pair: ${shader_name}`, err);
-      throw err;
+    } catch (error) {
+      console.error(
+        `[AssetManager] Failed to load shader pair: "${shaderName}"`,
+        error,
+      );
+      throw new Error(`Shader load failed: ${shaderName}`);
     }
   }
 
   /**
-   * @param {string} path - The absolute path of the texture.
-   * @returns {Promise<THREE.Texture>}
+   * Asynchronously loads an image as a Three.js texture.
+   * Applies default configurations optimized for modern 3D rendering (sRGB color space, high anisotropy).
+   *
+   * @param {string} path - The absolute or relative path to the texture image.
+   * @returns {Promise<THREE.Texture>} A promise that resolves to the fully configured Three.js texture.
+   * @throws {Error} If the texture image fails to load.
    */
   async load_texture(path) {
-    if (this.texture_cache.has(path)) {
-      return this.texture_cache.get(path);
+    // 1. Return cached texture if it has already been loaded
+    if (this.textureCache.has(path)) {
+      return this.textureCache.get(path);
     }
+
+    // 2. Wrap the callback-based TextureLoader in a modern Promise
     return new Promise((resolve, reject) => {
-      this.texture_loader.load(
+      this.textureLoader.load(
         path,
-        // onLoad
         (texture) => {
+          // Configure texture settings for optimal rendering quality
           texture.colorSpace = THREE.SRGBColorSpace;
           texture.anisotropy = 16;
           texture.magFilter = THREE.LinearFilter;
           texture.minFilter = THREE.LinearMipMapLinearFilter;
-          this.texture_cache.set(path, texture);
+
+          // 3. Cache the configured texture
+          this.textureCache.set(path, texture);
           resolve(texture);
         },
-        // onProgress
-        undefined,
-        // onError
-        reject,
+        undefined, // onProgress callback (intentionally left undefined)
+        (error) => {
+          console.error(
+            `[AssetManager] Failed to load texture at path: "${path}"`,
+            error,
+          );
+          reject(error);
+        },
       );
     });
   }
